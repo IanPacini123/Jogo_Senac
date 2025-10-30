@@ -29,11 +29,11 @@
             "position": 6
         },
         {
-            "tileId": "1",
+            "tileId": "N",
             "position": 7
         },
         {
-            "tileId": "N",
+            "tileId": "1",
             "position": 8
         },
         {
@@ -57,7 +57,7 @@
             "position": 13
         },
         {
-            "tileId": "N",
+            "tileId": "7",
             "position": 14
         },
         {
@@ -65,7 +65,7 @@
             "position": 15
         },
         {
-            "tileId": "7",
+            "tileId": "N",
             "position": 16
         },
         {
