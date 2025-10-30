@@ -111,7 +111,7 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
         <p className="mb-2 text-base">{detail.question}</p>
         {!isSpecial && (
           <>
-            {showResposta !== null && (
+            {showResposta !== null && showResposta === "correta" && (
               <>
                 <div className="mb-2">
                   <span className="font-semibold">Resposta:</span> <span>{detail.answer}</span>
@@ -130,20 +130,22 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
             )}
           </>
         )}
-        <div className="flex justify-center gap-4 mt-4">
-          <button
-            className="px-4 py-2 bg-green-600 text-white rounded"
-            onClick={() => setShowResposta("correta")}
-          >
-            Resposta Correta
-          </button>
-          <button
-            className="px-4 py-2 bg-red-600 text-white rounded"
-            onClick={() => setShowResposta("errada")}
-          >
-            Resposta Errada
-          </button>
-        </div>
+        {isSpecial !== true && (
+          <div className="flex justify-center gap-4 mt-4">
+            <button
+              className="px-4 py-2 bg-green-600 text-white rounded"
+              onClick={() => setShowResposta("correta")}
+            >
+              Resposta Correta
+            </button>
+            <button
+              className="px-4 py-2 bg-red-600 text-white rounded"
+              onClick={() => setShowResposta("errada")}
+            >
+              Resposta Errada
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
