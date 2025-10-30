@@ -27,7 +27,7 @@ const PlayerColumn: React.FC<PlayerColumnProps> = ({
       {
         id: crypto.randomUUID(),
         name: newPlayerName,
-        position: 0,
+        position: -1,
       },
     ]);
     setNewPlayerName("");
