@@ -1,0 +1,250 @@
+{
+    "locale_tiles": [
+        {
+            "tile_id": "1",
+            "questions": {
+                "1": {
+                    "question": "Qual é a lenda que reside no Teatro José de Alencar?",
+                    "answer": "Bailarina Fantasma",
+                    "bonus": "Se souber explicar com detalhes (ex: que ela morreu após cair do palco, que dizem que seu espírito dança nas noites de lua cheia, etc.), pode escolher uma das quatro ações bônus a seguir:\n1. Pular a próxima prenda que cair\n2. Trocar de lugar com outro jogador\n3. Rolar o dado de novo\n4. Escolher o jogador que quiser para andar 3 casas pra trás",
+                    "drawback": "15 segundos de balé (com música)"
+                },
+                "2": {
+                    "question": "Qual o fim da sala com piano no último andar do Teatro José de Alencar?",
+                    "answer": "Sala de espera dos burgueses de Fortaleza, enquanto os pobres esperavam no calor",
+                    "bonus": null,
+                    "drawback": "Encenar que está tocando piano até a vez de jogar de novo"
+                },
+                "3": {
+                    "question": "Quantas fachadas o Teatro José de Alencar possui?",
+                    "answer": "Duas",
+                    "bonus": null,
+                    "drawback": "Posar como se fosse uma estátua nas duas fachadas, mudando de posição a cada 5 segundos por 20 segundos"
+                },
+                "4": {
+                    "question": "Qual é o apelido do último andar de cadeiras dentro do Teatro José de Alencar?",
+                    "answer": "Inferninho. Porque lá era muito quente, então as pessoas mais pobres eram mandadas lá pra cima",
+                    "bonus": "Se souber explicar a resposta, pode rodar o dado novamente",
+                    "drawback": "Fingir estar derretendo de calor enquanto segura um leque imaginário até a próxima rodada"
+                }
+            }
+        },
+        {
+            "tile_id": "2",
+            "questions": {
+                "1": {
+                    "question": "Qual era o antigo nome da Pinacoteca do Ceará?",
+                    "answer": "Museu de Arte do Ceará",
+                    "bonus": "Se souber o motivo da mudança do nome, pode trocar de lugar com outro jogador (Resposta - A mudança de nome ocorreu para adequar o espaço à nova proposta curatorial e dar identidade própria à Pinacoteca do Ceará, como instituição voltada exclusivamente às artes visuais)",
+                    "drawback": "Posar como uma estátua por 30 segundos"
+                },
+                "2": {
+                    "question": "Que tipo de exposições a Pinacoteca abriga principalmente?",
+                    "answer": "Arte contemporânea e acervo de artistas cearenses",
+                    "bonus": null,
+                    "drawback": "Imitar uma obra de arte famosa"
+                },
+                "3": {
+                    "question": "Quantos pavimentos a Pinacoteca possui?",
+                    "answer": "Três",
+                    "bonus": null,
+                    "drawback": "Fazer uma dancinha subindo degraus imaginários"
+                },
+                "4": {
+                    "question": "Onde a Pinacoteca está localizada?",
+                    "answer": "Praça da Estação (Centro de Fortaleza)",
+                    "bonus": null,
+                    "drawback": "Fingir que está guiando um grupo de turistas por 20 segundos"
+                }
+            }
+        },
+        {
+            "tile_id": "3",
+            "questions": {
+                "1": {
+                    "question": "Qual árvore exótica e centenária, originária da África, pode ser encontrada no Passeio Público e é uma das mais antigas de Fortaleza?",
+                    "answer": "O baobá",
+                    "bonus": null,
+                    "drawback": "Fazer uma pose de “árvore lendária” e ficar parado com os braços abertos por 15 segundos"
+                },
+                "2": {
+                    "question": "Qual a importância histórica do Passeio Público?",
+                    "answer": "Primeiro jardim público de Fortaleza",
+                    "bonus": "Se souber informar o século da construção pode escolher um jogador para voltar 2 casas (Resposta - Século 19)",
+                    "drawback": "Fingir que está regando plantas enquanto responde perguntas"
+                },
+                "3": {
+                    "question": "Quais aves vivem no Passeio Público atualmente?",
+                    "answer": "Principalmente as socó-garça e o anu-preto",
+                    "bonus": null,
+                    "drawback": "Imitar um animal até alguém acertar qual é"
+                },
+                "4": {
+                    "question": "Qual o nome oficial completo do Passeio Público?",
+                    "answer": "Praça dos Mártires",
+                    "bonus": null,
+                    "drawback": "Dizer uma frase patriótica como se fosse um político"
+                }
+            }
+        },
+        {
+            "tile_id": "4",
+            "questions": {
+                "1": {
+                    "question": "O que é mais vendido no Mercado Central?",
+                    "answer": "Artesanato, comidas típicas e lembranças",
+                    "bonus": "Se listar três produtos populares, pode avançar 3 casas (Respostas - redes, rendas, castanhas e peças de couro)",
+                    "drawback": "Simular a venda de um produto com entusiasmo"
+                },
+                "2": {
+                    "question": "Quantos andares tem o Mercado Central?",
+                    "answer": "Quatro",
+                    "bonus": null,
+                    "drawback": "Fazer movimentos como se estivesse subindo e descendo escadas"
+                },
+                "3": {
+                    "question": "Qual item é típico e muito procurado por turistas no mercado?",
+                    "answer": "Redes, rendas ou castanhas",
+                    "bonus": null,
+                    "drawback": "Fazer um desfile com uma rede imaginária"
+                },
+                "4": {
+                    "question": "Em que bairro fica o Mercado Central?",
+                    "answer": "Centro",
+                    "bonus": null,
+                    "drawback": "Falar como um guia turístico apresentando o local"
+                }
+            }
+        },
+        {
+            "tile_id": "5",
+            "questions": {
+                "1": {
+                    "question": "Qual era a função original do prédio da Estação das Artes?",
+                    "answer": "Estação ferroviária",
+                    "bonus": "Se souber o nome da antiga estação (Estação João Felipe), avança diretamente para a próxima casa turística",
+                    "drawback": "Fingir que é um trem até sua próxima jogada"
+                },
+                "2": {
+                    "question": "Qual instituição cultural está integrada ao espaço da Estação?",
+                    "answer": "Pinacoteca do Ceará",
+                    "bonus": null,
+                    "drawback": "Dizer três palavras relacionadas a arte sem parar ou errar"
+                },
+                "3": {
+                    "question": "Que tipo de eventos acontecem na Estação das Artes?",
+                    "answer": "Exposições, shows, feiras culturais",
+                    "bonus": null,
+                    "drawback": "Simular que está apresentando um show musical"
+                },
+                "4": {
+                    "question": "O que representa o espaço revitalizado da Estação das Artes para Fortaleza?",
+                    "answer": "Valorização do patrimônio histórico e incentivo à cultura",
+                    "bonus": null,
+                    "drawback": "Fazer uma pose dramática como se fosse uma escultura histórica"
+                }
+            }
+        },
+        {
+            "tile_id": "6",
+                    "questions": {
+                "1": {
+                    "question": "Qual é o nome completo da biblioteca?",
+                    "answer": "Biblioteca Pública Estadual do Ceará (BECE)",
+                    "bonus": null,
+                    "drawback": "Imitar alguém muito concentrado lendo até a próxima rodada"
+                },
+                "2": {
+                    "question": "Cite pelo menos 3 setores da BECE.",
+                    "answer": "Alguns dos setores são: Obras Raras, Periódicos, Microfilmagem, Obras Gerais, Coleção Ceará, Artes e Iconografia, Atualidades, Setor Infantil, Espaço Multiuso, Oficina do Fazer (Makerspace), Espaço de Leitura, Espaço de Convivência.",
+                    "bonus": null,
+                    "drawback": "Simular que está organizando livros ou conduzindo visitantes entre os setores"
+                },
+                "3": {
+                    "question": "Quantos andares possui a BECE?",
+                    "answer": "Cinco andares",
+                    "bonus": null,
+                    "drawback": "Fingir que está organizando livros em diferentes prateleiras imaginárias"
+                },
+                "4": {
+                    "question": "Quantos volumes aproximadamente compõem o acervo da BECE?",
+                    "answer": "Cerca de 100 mil volumes",
+                    "bonus": null,
+                    "drawback": "Fingir que está carregando uma pilha enorme de livros"
+                }
+            }
+        },
+        {
+            "tile_id": "7",
+            "questions": {
+                "1": {
+                    "question": "Que tipo de arte é mais presente no prédio do Barão de Camocim?",
+                    "answer": "Arte urbana, exposições contemporâneas",
+                    "bonus": "Se souber citar o nome da última temática exposta lá, pode avançar para a próxima casa de número (Resposta - Despertar à Terra)",
+                    "drawback": "Fazer pose de grafiteiro"
+                },
+                "2": {
+                    "question": "O prédio pertence a qual tipo de patrimônio?",
+                    "answer": "Patrimônio Histórico e Artístico",
+                    "bonus": null,
+                    "drawback": "Fazer reverência como se fosse uma obra protegida"
+                },
+                "3": {
+                    "question": "O prédio foi construído em qual século?",
+                    "answer": "Século XIX",
+                    "bonus": null,
+                    "drawback": "Falar como se fosse alguém da época"
+                },
+                "4": {
+                    "question": "Qual instituição coordena o espaço atualmente?",
+                    "answer": "Secretaria da Cultura do Estado (Secult)",
+                    "bonus": null,
+                    "drawback": "Cantar um trecho de música local"
+                }
+            }
+        },
+        {
+            "tile_id": "8",
+            "questions": {
+                "1": {
+                    "question": "Qual estilo arquitetônico predomina na Catedral?",
+                    "answer": "Gótico",
+                    "bonus": "Se souber o nome do arquiteto francês, pode escolher alguém para voltar três casas (Resposta - George Maunier)",
+                    "drawback": "Fazer uma pose de vitral gótico"
+                },
+                "2": {
+                    "question": "Quantas torres possui a Catedral?",
+                    "answer": "Duas",
+                    "bonus": null,
+                    "drawback": "Imite um sino tocando com a boca"
+                },
+                "3": {
+                    "question": "Em que ano começou a construção da Catedral?",
+                    "answer": "1938",
+                    "bonus": null,
+                    "drawback": "Fingir que está construindo com tijolos imaginários"
+                },
+                "4": {
+                    "question": "Qual o nome da praça em frente à Catedral?",
+                    "answer": "Praça da Sé",
+                    "bonus": null,
+                    "drawback": "Recitar uma oração de forma dramática"
+                }
+            }
+        }
+    ],
+    "special_tiles": [
+        {
+            "tile_id": "9",
+            "drawback": "Jogador está preso na teia, só joga de novo se rolar um número par no dado."
+        },
+        {
+            "tile_id": "10",
+            "drawback": "Contar uma mini história de terror com voz assustadora."
+        },
+        {
+            "tile_id": "11",
+            "drawback": "Jogador 'fica invisível' até a próxima rodada (sem falar, gesticular, nem participar de ações"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "tiles": [
+        {
+            "id": "1",
+            "name": "Teatro Jose Alencar",
+            "image": "teatroJoseAlencar.jpg",
+            "type": "turistico"
+        },
+        {
+            "id": "2",
+            "name": "Pinacoteca do Ceará",
+            "image": "pinacotecaDoCeara.jpg",
+            "type": "turistico"
+        },
+        {
+            "id": "3",
+            "name": "Passeio Público",
+            "image": "passeioPublico.jpg",
+            "type": "turistico"
+        },
+        {
+            "id": "4",
+            "name": "Mercado Central",
+            "image": "mercadoCentral.jpeg",
+            "type": "turistico"
+        },
+        {
+            "id": "5",
+            "name": "Estação das Artes",
+            "image": "estacaoDasArtes.jpg",
+            "type": "turistico"
+        },
+        {
+            "id": "6",
+            "name": "Biblioteca Pública",
+            "image": "bibliotecaPublica.jpg",
+            "type": "turistico"
+        },
+        {
+            "id": "7",
+            "name": "Barão de Camocim",
+            "image": "baraoDeCamocim.jpeg",
+            "type": "turistico"
+        },
+        {
+            "id": "8",
+            "name": "Catedral Metropolitana de Fortaleza",
+            "image": "catedralMetropolitanaDeFortaleza.jpeg",
+            "type": "turistico"
+        },
+        {
+            "id": "9",
+            "name": "Casa da aranha",
+            "image": "casaDaAranha.webp",
+            "type": "especial"
+        },
+        {
+            "id": "10",
+            "name": "Casa da abobora",
+            "image": "casaDaAbobora.webp",
+            "type": "especial"
+        },
+        {
+            "id": "11",
+            "name": "Casa do fantasma",
+            "image": "casaDoFantasma.png",
+            "type": "especial"
+        }
+    ]
+}
