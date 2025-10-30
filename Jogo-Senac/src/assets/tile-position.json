@@ -22,30 +22,26 @@
         },
         {
             "tileId": "4",
-            "position": 4
-        },
-        {
-            "tileId": "N",
             "position": 5
         },
         {
-            "tileId": "1",
+            "tileId": "N",
             "position": 6
         },
         {
-            "tileId": "N",
+            "tileId": "1",
             "position": 7
         },
         {
-            "tileId": "11",
+            "tileId": "N",
             "position": 8
         },
         {
-            "tileId": "5",
+            "tileId": "11",
             "position": 9
         },
         {
-            "tileId": "N",
+            "tileId": "5",
             "position": 10
         },
         {
@@ -53,28 +49,32 @@
             "position": 11
         },
         {
-            "tileId": "6",
+            "tileId": "N",
             "position": 12
         },
         {
-            "tileId": "N",
+            "tileId": "6",
             "position": 13
         },
         {
-            "tileId": "10",
+            "tileId": "N",
             "position": 14
         },
         {
-            "tileId": "7",
+            "tileId": "10",
             "position": 15
         },
         {
-            "tileId": "N",
+            "tileId": "7",
             "position": 16
         },
         {
-            "tileId": "8",
+            "tileId": "N",
             "position": 17
+        },
+        {
+            "tileId": "8",
+            "position": 18
         }
     ]
 }

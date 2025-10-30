@@ -14,7 +14,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({ player }) => {
       >
         {player.name}
       </div>
-      <div className="text-blue-600 font-semibold mt-1">Position: {player.position}</div>
+      <div className="text-blue-600 font-semibold mt-1">Posição: {player.position}</div>
     </div>
   ) : (
     <div className="bg-gray-200 shadow rounded p-2 flex flex-col items-center w-32 text-gray-400">

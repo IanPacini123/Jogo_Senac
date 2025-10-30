@@ -24,12 +24,14 @@ interface PopupDisplay {
 const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
   const [popupData, setPopupData] = useState<PopupDisplay | null>(null);
   const [notFound, setNotFound] = useState(false);
+  const [showResposta, setShowResposta] = useState<null | "correta" | "errada">(null);
 
   useEffect(() => {
     if (!tileId) return;
 
     setPopupData(null);
     setNotFound(false);
+    setShowResposta(null);
 
     let found = false;
 
@@ -109,24 +111,39 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
         <p className="mb-2 text-base">{detail.question}</p>
         {!isSpecial && (
           <>
-            <div className="mb-2">
-              <span className="font-semibold">Resposta:</span> <span>{detail.answer}</span>
-            </div>
-            {detail.bonus && (
-              <div className="mb-2">
-                <span className="font-semibold">Bônus:</span> <span>{detail.bonus}</span>
-              </div>
+            {showResposta !== null && (
+              <>
+                <div className="mb-2">
+                  <span className="font-semibold">Resposta:</span> <span>{detail.answer}</span>
+                </div>
+                {detail.bonus && (
+                  <div className="mb-2">
+                    <span className="font-semibold">Bônus:</span> <span>{detail.bonus}</span>
+                  </div>
+                )}
+              </>
             )}
-            {detail.drawback && (
+            {detail.drawback && showResposta === "errada" && (
               <div className="mb-2">
                 <span className="font-semibold">Desafio:</span> <span>{detail.drawback}</span>
               </div>
             )}
           </>
         )}
-        <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded" onClick={onClose}>
-          Fechar
-        </button>
+        <div className="flex justify-center gap-4 mt-4">
+          <button
+            className="px-4 py-2 bg-green-600 text-white rounded"
+            onClick={() => setShowResposta("correta")}
+          >
+            Resposta Correta
+          </button>
+          <button
+            className="px-4 py-2 bg-red-600 text-white rounded"
+            onClick={() => setShowResposta("errada")}
+          >
+            Resposta Errada
+          </button>
+        </div>
       </div>
     </div>
   );
