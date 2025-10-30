@@ -16,6 +16,7 @@ interface QuestionDetail {
   question: string;
   answer: string;
   bonus: string | null;
+  bonus_answer?: string | null; // Allow for possible bonus answer
   drawback: string | null;
 }
 
@@ -74,6 +75,7 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({
     for (const tileQ of questionsData.locale_tiles) {
       if (String(tileQ.tile_id) === String(tileId)) {
         const questionsObj = tileQ.questions;
+        // Make sure to support bonus_answer in QuestionDetail
         const values: QuestionDetail[] = Object.values(questionsObj);
 
         if (values.length) {
@@ -98,6 +100,7 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({
               question: special.drawback,
               answer: "",
               bonus: null,
+              bonus_answer: null,
               drawback: null,
             }
           });
@@ -191,6 +194,12 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({
                 {detail.bonus && (
                   <div className="mb-2">
                     <span className="font-semibold">Bônus:</span> <span>{detail.bonus}</span>
+                    {/* Show bonus_answer if it exists */}
+                    {detail.bonus_answer && (
+                      <div className="mt-1 ml-4">
+                        <span className="font-semibold">Resposta do bônus:</span> <span>{detail.bonus_answer}</span>
+                      </div>
+                    )}
                   </div>
                 )}
               </>
