@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 
 // This import only works if using Vite/CRA and proper loader. If not, require/context may be needed.
 import questionsData from "../assets/questions.json";
+import { PlayerModel } from "../models/playerModel";
 
 interface QuestionPopUpProps {
   tileId: string | number;
   onClose: () => void;
+  setPlayers: React.Dispatch<React.SetStateAction<PlayerModel[]>>;
+  currentPlayerId?: string;
+  currentPlayerPosition?: number;
 }
 
 interface QuestionDetail {
@@ -21,10 +25,22 @@ interface PopupDisplay {
   detail: QuestionDetail;
 }
 
-const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
+type GostosuraTravessura = null | {
+  type: "gostosura" | "travessura";
+  message: string;
+};
+
+const QuestionPopUp: React.FC<QuestionPopUpProps> = ({
+  tileId,
+  onClose,
+  setPlayers,
+  currentPlayerId,
+  currentPlayerPosition,
+}) => {
   const [popupData, setPopupData] = useState<PopupDisplay | null>(null);
   const [notFound, setNotFound] = useState(false);
   const [showResposta, setShowResposta] = useState<null | "correta" | "errada">(null);
+  const [gostosuraTravessura, setGostosuraTravessura] = useState<GostosuraTravessura>(null);
 
   useEffect(() => {
     if (!tileId) return;
@@ -32,6 +48,25 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
     setPopupData(null);
     setNotFound(false);
     setShowResposta(null);
+    setGostosuraTravessura(null);
+
+    // Handle tileId === "N" (Gostosuras ou travessuras)
+    if (String(tileId) === "N") {
+      // Randomize between gostosura (good) and travessura (bad)
+      const isGostosura = Math.random() < 0.5;
+      if (isGostosura) {
+        setGostosuraTravessura({
+          type: "gostosura",
+          message: "Gostosuras - Fica imune ao próximo efeito negativo"
+        });
+      } else {
+        setGostosuraTravessura({
+          type: "travessura",
+          message: "Travessuras - Fica a próxima rodada sem jogar"
+        });
+      }
+      return;
+    }
 
     let found = false;
 
@@ -75,8 +110,22 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
     if (!found) {
       setNotFound(true);
     }
-
   }, [tileId]);
+
+  // Handler to move the player back one position if a mistake (can be customized as needed)
+  const handleWrongAnswer = () => {
+    setShowResposta("errada");
+    if (setPlayers && currentPlayerId != null && typeof currentPlayerPosition === "number") {
+      const newPosition = Math.max(currentPlayerPosition - 1, 0);
+      setPlayers(playersArr =>
+        playersArr.map(player =>
+          player.id === currentPlayerId
+            ? { ...player, position: newPosition }
+            : player
+        )
+      );
+    }
+  };
 
   if (notFound) {
     return (
@@ -86,6 +135,29 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
           <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded" onClick={onClose}>
             Fechar
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Popup for "N" tile (Gostosuras ou travessuras)
+  if (gostosuraTravessura) {
+    return (
+      <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-40">
+        <div className="bg-white rounded-lg shadow-lg p-6 w-[350px] max-w-[95vw] relative text-black">
+          <button
+            className="absolute right-4 top-4 text-gray-500 hover:text-red-400 font-bold text-xl"
+            onClick={onClose}
+            aria-label="Fechar popup"
+          >
+            ×
+          </button>
+          <h3 className="text-lg font-bold mb-3">
+            Gostosuras ou travessuras!
+          </h3>
+          <p className={`mb-2 text-base font-semibold ${gostosuraTravessura.type === "gostosura" ? "text-green-700" : "text-orange-700"}`}>
+            {gostosuraTravessura.message}
+          </p>
         </div>
       </div>
     );
@@ -140,7 +212,8 @@ const QuestionPopUp: React.FC<QuestionPopUpProps> = ({ tileId, onClose }) => {
             </button>
             <button
               className="px-4 py-2 bg-red-600 text-white rounded"
-              onClick={() => setShowResposta("errada")}
+              // When wrong, move player back and reveal desafio
+              onClick={handleWrongAnswer}
             >
               Resposta Errada
             </button>

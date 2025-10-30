@@ -48,7 +48,7 @@ function App() {
   const movePlayer = (playerId: string, newPosition: number) => {
     const tileId = positionToTileId[newPosition];
     // Only show popup if there is a non-'N' tileId for this position
-    if (tileId && tileId !== "N") {
+    if (tileId) {
       setQuestionPopupTileId(tileId);
     }
   };
@@ -88,11 +88,36 @@ function App() {
         ))}
       </div>
 
-      {/* Question pop-up in the middle of the screen */}
+      {/* Track who triggered the question popup */}
       {questionPopupTileId && (
         <QuestionPopUp
           tileId={questionPopupTileId}
           onClose={() => setQuestionPopupTileId(null)}
+          setPlayers={setPlayers}
+          currentPlayerId={
+            (() => {
+              // Get all players occupying the tile
+              const candidates = players.filter(player => {
+                const tileIdAtPlayer = positionToTileId[player.position];
+                return String(tileIdAtPlayer) === String(questionPopupTileId);
+              });
+              // The player who moved last into this tile is the one with the highest order in array
+              // (Assuming we push/modify in array order, last in list is last to move)
+              // If we want to strictly track, we would need to record player "move order" state, but fallback:
+              const last = candidates.length ? candidates[candidates.length - 1] : undefined;
+              return last ? last.id : undefined;
+            })()
+          }
+          currentPlayerPosition={
+            (() => {
+              const candidates = players.filter(player => {
+                const tileIdAtPlayer = positionToTileId[player.position];
+                return String(tileIdAtPlayer) === String(questionPopupTileId);
+              });
+              const last = candidates.length ? candidates[candidates.length - 1] : undefined;
+              return last ? last.position : undefined;
+            })()
+          }
         />
       )}
     </div>
